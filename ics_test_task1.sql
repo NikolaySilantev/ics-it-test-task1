@@ -2,7 +2,8 @@ select
 	e1.code as КодСотрудника1
 	, v1.DateBegin as НачалоОтпуска
 	, v1.DateEnd as КонецОтпуска
-	, e2.code as КодСотрудника2, v2.DateBegin as НачалоОтпуска
+	, e2.code as КодСотрудника2
+	, v2.DateBegin as НачалоОтпуска
 	, v2.DateEnd as КонецОтпуска
 from Vacation as v1 
 	inner join Vacation as v2 on v1.DateBegin <= v2.DateEnd 
